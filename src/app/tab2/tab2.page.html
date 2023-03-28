@@ -13,5 +13,163 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!--<app-explore-container name="Tab 2 page"></app-explore-container>-->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1" sizeLg="3">1</ion-col>
+      <ion-col size="1" sizeLg="3">2</ion-col>
+      <ion-col size="1" sizeLg="3">3</ion-col>
+      <ion-col size="1" sizeLg="3">4</ion-col>
+      <ion-col size="1" sizeLg="3">5</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+      <ion-col>4</ion-col>
+      <ion-col>5</ion-col>
+      <ion-col>6</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>1</ion-col>
+      <ion-col>2</ion-col>
+      <ion-col>3</ion-col>
+      <ion-col>4</ion-col>
+      <ion-col>5</ion-col>
+      <ion-col>6</ion-col>
+      <ion-col>7</ion-col>
+      <ion-col>8</ion-col>
+      <ion-col>9</ion-col>
+      <ion-col>10</ion-col>
+      <ion-col>11</ion-col>
+      <ion-col>12</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item>
+    <ion-label>Default</ion-label>
+    <ion-spinner></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Dots</ion-label>
+    <ion-spinner name="dots"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Lines</ion-label>
+    <ion-spinner name="lines"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Lines Small</ion-label>
+    <ion-spinner name="lines-small"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Lines Sharp</ion-label>
+    <ion-spinner color="danger" name="lines-sharp"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Lines Sharp Small</ion-label>
+    <ion-spinner color="warning" name="lines-sharp-small"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Bubbles</ion-label>
+    <ion-spinner color="success" name="bubbles"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Circles</ion-label>
+    <ion-spinner color="secondary" name="circles"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Circular</ion-label>
+    <ion-spinner color="primary" name="circular"></ion-spinner>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Crescent</ion-label>
+    <ion-spinner color="tertiary" name="crescent"></ion-spinner>
+  </ion-item>
+
+  <ion-datetime presentation="date" preferWheel="true" (ionChange)="valueChange($event)">
+    <ion-buttons slot="buttons">
+      <ion-button color="danger" (click)="datetime.reset()">Reset</ion-button>
+      <ion-button color="primary" (click)="datetime.cancel()">Never mind</ion-button>
+      <ion-button color="primary" (click)="confirm()">All Set</ion-button>
+    </ion-buttons>
+  </ion-datetime>
+
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Select fruit" (ionChange)="selectOneFruit($event)">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select interface="popover" placeholder="Select fruit" (ionChange)="selectOneFruit($event)">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-select interface="action-sheet" placeholder="Select all fruits that apply" [multiple]="true" (ionChange)="selectMultipleFruits($event)">
+        <ion-select-option value="apples">Apples</ion-select-option>
+        <ion-select-option value="oranges">Oranges</ion-select-option>
+        <ion-select-option value="bananas">Bananas</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox (ionChange)="check($event)" slot="start"></ion-checkbox>
+      <ion-label>I agree to the terms and conditions</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Default Toggle</ion-label>
+      <ion-toggle (ionChange)="check($event)" slot="end"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="fruit">
+      <ion-item>
+        <ion-label>Grapes</ion-label>
+        <ion-radio slot="end" value="grapes"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Strawberries</ion-label>
+        <ion-radio slot="end" value="strawberries"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pineapple</ion-label>
+        <ion-radio slot="end" value="pineapple"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cherries (Disabled)</ion-label>
+        <ion-radio slot="end" value="cherries" [disabled]="true"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-text>{{ fruit }}</ion-text>
 </ion-content>

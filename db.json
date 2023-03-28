@@ -1,0 +1,27 @@
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" },
+  "employees": [
+    { "id": 1, "name": "eduardo" },
+    { "id": 2, "name": "paco" },
+    { "id": 3, "name": "eduardo" },
+    { "id": 4, "name": "paco" },
+    { "id": 5, "name": "eduardo" },
+    { "id": 6, "name": "paco" },
+    { "id": 7, "name": "eduardo" },
+    { "id": 8, "name": "paco" },
+    { "id": 9, "name": "eduardo" },
+    { "id": 10, "name": "paco" },
+    { "id": 11, "name": "eduardo" },
+    { "id": 12, "name": "paco" },
+    { "id": 13, "name": "eduardo" },
+    { "id": 14, "name": "paco" },
+    { "id": 15, "name": "eduardo" },
+    { "id": 16, "name": "paco" }
+  ]
+}

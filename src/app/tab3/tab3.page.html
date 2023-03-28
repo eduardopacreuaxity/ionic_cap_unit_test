@@ -13,5 +13,26 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+
   <app-explore-container name="Tab 3 page"></app-explore-container>
+
+  <ion-text color="danger">{{ handlerMessage }}</ion-text>
+
+  <ion-list>
+    <ion-item *ngFor="let item of list">
+      <ion-checkbox slot="end"></ion-checkbox>
+      <ion-label>{{item.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="loadList($event)">
+    <ion-infinite-scroll-content loadingText="Please wait..." loadingSpinner="crescent"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

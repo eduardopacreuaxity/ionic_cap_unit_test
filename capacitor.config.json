@@ -2,5 +2,19 @@
 	"appId": "io.ionic.starter",
 	"appName": "Curso",
 	"webDir": "www",
-	"bundledWebRuntime": false
+  "bundledWebRuntime": false,
+  "server": {
+    "cleartext": true,
+    "allowNavigation": [
+      "https://api.axity.com/*",
+      "https://google.com/*"
+    ]
+  },
+  "android": {
+    "flavor": "qa"
+  },
+  "ios": {
+    "scheme": "App QA",
+    "contentInset": "always"
+  }
 }

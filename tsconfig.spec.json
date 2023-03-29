@@ -5,7 +5,11 @@
     "outDir": "./out-tsc/spec",
     "types": [
       "jasmine"
-    ]
+    ],
+    "paths": {
+      "@capacitor/*": ["__mocks__/@capacitor/*"],
+      "capacitor-native-biometric":["__mocks__/capacitor-native-biometric.ts"]
+    }
   },
   "files": [
     "src/test.ts",

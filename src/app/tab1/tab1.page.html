@@ -31,6 +31,19 @@
 
   <ion-text>{{ message }}</ion-text>
 
+  <ion-button shape="round" fill="outline" color="warning" (click)="shareLink()">
+    Share Info
+  </ion-button>
+
+  <ion-button shape="round" fill="outline" color="success" (click)="setBiometric()">
+    Set Biometric
+  </ion-button>
+  <ion-button shape="round" fill="outline" color="danger" (click)="getBiometric()">
+    Get Biometric
+  </ion-button>
+
+  <ion-text>{{ credentials }}</ion-text>
+
   <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
     <ng-template>
       <ion-header>

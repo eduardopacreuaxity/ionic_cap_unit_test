@@ -1,3 +1,7 @@
 ion-button::part(native) {
   background: transparent;
 }
+
+ion-button.ios {
+  --background: red
+}
